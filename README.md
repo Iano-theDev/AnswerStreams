@@ -23,16 +23,16 @@ Here are some images of the same.
 ![AnswerStreams_page-0004](https://user-images.githubusercontent.com/60983828/223236779-ce2f1c51-3ede-407a-9fb3-4c9b148cf2e1.jpg)
 
 
-## Single Question Page
-![AnswerStreams_page-0005](https://user-images.githubusercontent.com/60983828/223236799-0fc53065-8d58-4135-8ec4-5aa9bf631ec7.jpg)
+## Single Question Page!
+[AnswerStreams_page-0005](https://user-images.githubusercontent.com/60983828/223246788-015efa39-1c28-45cb-b32a-0e4559a8babd.jpg)
 
 
 ## Profile Page
 ![AnswerStreams_page-0006](https://user-images.githubusercontent.com/60983828/223236843-f3cae014-8b0e-46e5-8c67-012505add773.jpg)
 
 
-## Ask Page![AnswerStreams_page-0007](https://user-images.githubusercontent.com/60983828/223236881-fd37d0f8-818f-456f-9f7e-6342ccc78fcf.jpg)
-
+## Ask Page!
+![AnswerStreams_page-0007](https://user-images.githubusercontent.com/60983828/223246474-f27df8a1-6f0b-4bf7-85a6-d24efd67023e.jpg)
 
 
 ## Admin Page
