@@ -35,7 +35,23 @@ Here are some images of the same.
 ![AnswerStreams_page-0007](https://user-images.githubusercontent.com/60983828/223246474-f27df8a1-6f0b-4bf7-85a6-d24efd67023e.jpg)
 
 
-## Admin Page
-![AnswerStreams_page-0008](https://user-images.githubusercontent.com/60983828/223236620-14bcd567-5cf1-4ec8-b847-96697eabb8bc.jpg)
+## Admin Analytics
+![AnswerStreams_page-0008](https://user-images.githubusercontent.com/60983828/223365120-5f9aa47a-e56c-45aa-9dfe-27c1ec5f484e.jpg)
+
+
+## Admin Questions
+![AnswerStreams_page-0009](https://user-images.githubusercontent.com/60983828/223365264-856eb2e1-f05f-4e82-9bf0-091344ce91d5.jpg)
+
+
+## Admin Users
+![AnswerStreams_page-0010](https://user-images.githubusercontent.com/60983828/223365380-21144ec4-f943-4770-9c74-0a6f58687510.jpg)
+
+
+
+
+
+
+
+
 
 
