@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+}
+
+.footer {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    background: #244770;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5em;
+    position: absolute;
+    bottom: 0;
+}
