@@ -24,7 +24,7 @@ Here are some images of the same.
 
 
 ## Single Question Page!
-[AnswerStreams_page-0005](https://user-images.githubusercontent.com/60983828/223246788-015efa39-1c28-45cb-b32a-0e4559a8babd.jpg)
+![AnswerStreams_page-0005](https://user-images.githubusercontent.com/60983828/223622578-dcd1e47b-b90d-4633-ab8d-b760902f8308.jpg)
 
 
 ## Profile Page
