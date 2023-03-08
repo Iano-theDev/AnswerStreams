@@ -12,6 +12,6 @@
     justify-content: center;
     align-items: center;
     height: 5em;
-    position: absolute;
+    position: relative;
     bottom: 0;
 }
