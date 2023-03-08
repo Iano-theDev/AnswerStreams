@@ -75,16 +75,16 @@ a {
     border-radius: .3em;
     padding: .8em;
     width: 7em;
-    border: 1px solid #1DA0FF;
+    border: 1px solid #244770;
 }
 
 .login-btn {
-    color: #1DA0FF;
+    color: #244770;
 }
 
 .signup-btn {
     color: #fff;
-    background: #1DA0FF;
+    background: #244770;
 }
 
 /* mobile design */
