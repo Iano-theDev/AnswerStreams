@@ -7,6 +7,7 @@ import { HeaderComponent } from "./shared/components/header/header.component";
 import { FooterComponent } from "./shared/components/footer/footer.component";
 import { HomepageComponent } from "./homepage/homepage.component";
 import { RegisterComponent } from "./features/auth/register/register.component";
+import { LoginComponent } from "./features/auth/login/login.component";
 
 @NgModule({
     declarations: [
@@ -20,7 +21,8 @@ import { RegisterComponent } from "./features/auth/register/register.component";
         HeaderComponent,
         FooterComponent,
         HomepageComponent,
-        RegisterComponent
+        RegisterComponent,
+        LoginComponent
     ]
 })
 export class AppModule { }
