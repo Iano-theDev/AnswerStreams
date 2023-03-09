@@ -1,0 +1,78 @@
+.body {
+    background: #E1E9EE;
+    height: 100vh;
+    width: 100%;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgb(189, 189, 189);
+    padding: .8em;
+    width: 40%;
+    margin-left: 30%;
+    margin-top: 5%;
+    margin-top: 5%;
+    position: absolute;
+    background: #fff;
+    border-radius: .3em;
+    font-family: 'Poppins', sans-serif;
+    color: rgb(54, 54, 54);
+
+}
+
+.container > form {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+form label {
+    font-size: 14px;
+}
+
+form input {
+   padding: .8em;
+}
+
+form
+input,
+textarea {
+    border: 1px solid rgb(189, 189, 189);
+}
+
+
+
+.details-container {
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+    border-radius: .2em;
+}
+
+
+
+.ask-question {
+    /* height: 3em;
+    width: 6em; */
+    background: #244770;
+    color: #fff;
+    border: none;
+    border-radius: .1em;
+    padding: .8em;
+    margin-bottom: 1em;
+}
+
+/* mobile design */
+@media(max-width: 700px){
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: .8em;
+        width: 90%;
+        margin: 2%;
+        margin-top: 10%;
+        margin-bottom: 10%;
+    }
+}
