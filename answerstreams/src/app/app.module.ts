@@ -8,6 +8,8 @@ import { FooterComponent } from "./shared/components/footer/footer.component";
 import { HomepageComponent } from "./homepage/homepage.component";
 import { RegisterComponent } from "./features/auth/register/register.component";
 import { LoginComponent } from "./features/auth/login/login.component";
+import { QuestionsComponent } from "./features/questions/questions/questions.component";
+import { StoreModule } from '@ngrx/store';
 
 @NgModule({
     declarations: [
@@ -22,7 +24,9 @@ import { LoginComponent } from "./features/auth/login/login.component";
         FooterComponent,
         HomepageComponent,
         RegisterComponent,
-        LoginComponent
+        LoginComponent,
+        QuestionsComponent,
+        StoreModule.forRoot({}, {})
     ]
 })
 export class AppModule { }
