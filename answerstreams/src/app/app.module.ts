@@ -10,6 +10,7 @@ import { RegisterComponent } from "./features/auth/register/register.component";
 import { LoginComponent } from "./features/auth/login/login.component";
 import { QuestionsComponent } from "./features/questions/questions/questions.component";
 import { StoreModule } from '@ngrx/store';
+import { AskQuestionComponent } from "./features/questions/ask-question/ask-question.component";
 
 @NgModule({
     declarations: [
@@ -26,7 +27,8 @@ import { StoreModule } from '@ngrx/store';
         RegisterComponent,
         LoginComponent,
         QuestionsComponent,
-        StoreModule.forRoot({}, {})
+        StoreModule.forRoot({}, {}),
+        AskQuestionComponent
     ]
 })
 export class AppModule { }
