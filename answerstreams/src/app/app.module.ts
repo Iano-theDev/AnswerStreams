@@ -10,6 +10,7 @@ import { RegisterComponent } from "./features/auth/register/register.component";
 import { LoginComponent } from "./features/auth/login/login.component";
 import { QuestionsComponent } from "./features/questions/questions/questions.component";
 import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
 import { AskQuestionComponent } from "./features/questions/ask-question/ask-question.component";
 
 @NgModule({
@@ -27,8 +28,10 @@ import { AskQuestionComponent } from "./features/questions/ask-question/ask-ques
         RegisterComponent,
         LoginComponent,
         QuestionsComponent,
-        StoreModule.forRoot({}, {}),
+        StoreModule.forRoot({}, {}
+        EffectsModule.forRoot([])
         AskQuestionComponent
+
     ]
 })
 export class AppModule { }
