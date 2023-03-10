@@ -28,8 +28,8 @@ import { AskQuestionComponent } from "./features/questions/ask-question/ask-ques
         RegisterComponent,
         LoginComponent,
         QuestionsComponent,
-        StoreModule.forRoot({}, {}
-        EffectsModule.forRoot([])
+        StoreModule.forRoot({}, {}),
+        EffectsModule.forRoot([]),
         AskQuestionComponent
 
     ]
