@@ -1,6 +1,8 @@
 export interface Comment {
-    id: string;
+    commentId: string;
+    questionId?: string;
+    answerId?:string;
+    userId: string;
     body: string;
-    user: string;
     createdAt: string;
 }
