@@ -12,6 +12,7 @@ import { QuestionsComponent } from "./features/questions/questions/questions.com
 import { StoreModule } from '@ngrx/store';
 import { AskQuestionComponent } from "./features/questions/ask-question/ask-question.component";
 import { SingleQuestionComponent } from "./features/questions/single-question/single-question.component";
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
     declarations: [
@@ -30,7 +31,8 @@ import { SingleQuestionComponent } from "./features/questions/single-question/si
         QuestionsComponent,
         StoreModule.forRoot({}, {}),
         AskQuestionComponent,
-        SingleQuestionComponent
+        SingleQuestionComponent,
+        FontAwesomeModule
     ]
 })
 export class AppModule { }
