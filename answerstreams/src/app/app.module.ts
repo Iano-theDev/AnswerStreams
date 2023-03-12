@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, isDevMode } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -12,6 +12,7 @@ import { QuestionsComponent } from "./features/questions/questions/questions.com
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { AskQuestionComponent } from "./features/questions/ask-question/ask-question.component";
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 @NgModule({
     declarations: [
@@ -30,7 +31,8 @@ import { AskQuestionComponent } from "./features/questions/ask-question/ask-ques
         QuestionsComponent,
         StoreModule.forRoot({}, {}),
         EffectsModule.forRoot([]),
-        AskQuestionComponent
+        AskQuestionComponent,
+        StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() })
 
     ]
 })
