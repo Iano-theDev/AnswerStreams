@@ -12,6 +12,3 @@ export const loadQuestionsFailure = createAction(
     '[Question] Load Questions Failure',
     props<{ error: any }>()
 )
-
-
-
