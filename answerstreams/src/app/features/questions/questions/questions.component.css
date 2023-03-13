@@ -26,6 +26,7 @@
     border: none;
     border-radius: .3em;
     padding: .5em;
+    cursor: pointer;
 }
 
 .question {
@@ -47,6 +48,7 @@
 h3 {
     margin: 0;
     color: rgb(45, 45, 45);
+    cursor: pointer;
 }
 
 .question-activity {
