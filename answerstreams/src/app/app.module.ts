@@ -12,7 +12,11 @@ import { QuestionsComponent } from "./features/questions/questions/questions.com
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { AskQuestionComponent } from "./features/questions/ask-question/ask-question.component";
+
+import { SingleQuestionComponent } from "./features/questions/single-question/single-question.component";
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+
 
 @NgModule({
     declarations: [
@@ -30,10 +34,12 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
         LoginComponent,
         QuestionsComponent,
         StoreModule.forRoot({}, {}),
+        AskQuestionComponent,
+        SingleQuestionComponent,
+        FontAwesomeModule
         EffectsModule.forRoot([]),
         AskQuestionComponent,
-        StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() })
-
+        StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() }
     ]
 })
 export class AppModule { }

@@ -1,1 +1,69 @@
-<p>single-question works!</p>
+<app-header></app-header>
+
+<div class="container">
+    <div class="question-area">
+        <div class="question-heading">
+            <div class="heading">
+                <h2>Why is the sky always blue?</h2>
+            </div>
+            <div class="date">
+                <p>12/03/2021</p>
+            </div>
+        </div>
+        <div class="question-body">
+            <div class="votes-area">
+                <fa-icon class="thumbs" [icon]="faThumbsUp"></fa-icon>
+                <div class="count">
+                    <p class="vote-count">0</p>
+                </div>
+                <fa-icon class="thumbs" [icon]="faThumbsDown"></fa-icon>
+            </div>
+            <div class="text-area">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste harum numquam, culpa placeat tempora, amet earum rem eveniet nemo voluptate odit exercitationem quisquam deserunt? Rem numquam porro eos earum provident.</p>
+            </div>
+        </div>
+        <hr>
+        <div class="comments-area">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat voluptatibus omnis est laboriosam repudiandae ab dolorum ducimus magni. Nulla accusamus saepe eos tempore! Debitis reprehenderit voluptas architecto molestias accusamus non.</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat voluptatibus omnis est laboriosam repudiandae ab dolorum ducimus magni. Nulla accusamus saepe eos tempore! Debitis reprehenderit voluptas architecto molestias accusamus non.</p>
+
+            <div class="add-comment">
+                <div class="add-comment">
+                    <textarea name="" id="" cols="30" rows="2"></textarea>
+                    <button>add-comment</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="answer-area">
+        <h4>Answers</h4>
+        <div class="answer-body">
+            <div class="votes-area">
+                <fa-icon class="thumbs" [icon]="faThumbsUp"></fa-icon>
+                <div class="count">
+                    <p class="vote-count">0</p>
+                </div>
+                <fa-icon class="thumbs" [icon]="faThumbsDown"></fa-icon>
+            </div>
+            <div class="text-area">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste harum numquam, culpa placeat tempora, amet earum rem eveniet nemo voluptate odit exercitationem quisquam deserunt? Rem numquam porro eos earum provident.</p>
+            </div>
+        </div>
+        <hr>
+        <div class="comments-area">
+          
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat voluptatibus omnis est laboriosam repudiandae ab dolorum ducimus magni. Nulla accusamus saepe eos tempore! Debitis reprehenderit voluptas architecto molestias accusamus non.</p>
+            <div class="add-comment">
+                <textarea name="" id="" cols="30" rows="2"></textarea>
+                <button>add-comment</button>
+            </div>
+        </div>
+        <div class="add-answer">
+            <textarea name="" id="" cols="30" rows="3"></textarea>
+            <button (click)="showInput = !(showInput != false)">Add answer</button>
+        </div>
+    </div>
+</div>
+
+<app-footer></app-footer>
