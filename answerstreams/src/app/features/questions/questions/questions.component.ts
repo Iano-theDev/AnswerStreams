@@ -7,13 +7,14 @@ import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
 import { Question } from 'src/app/shared/models/question.model';
 import { QuestionService } from '../questions.service';
+import { RouterModule } from '@angular/router';
 
 @Component({
     selector: 'app-questions',
     standalone: true,
     templateUrl: './questions.component.html',
     styleUrls: ['./questions.component.css'],
-    imports: [CommonModule, HeaderComponent, FooterComponent]
+    imports: [CommonModule, HeaderComponent, FooterComponent, RouterModule]
 })
 export class QuestionsComponent implements OnInit{
     // questions$!: Observable<Question[]>;

@@ -23,6 +23,10 @@
 
 /* logo */
 
+.logo {
+    cursor: pointer;
+}
+
 .logo
 h3 {
     font-family: 'Inter';
@@ -80,11 +84,13 @@ a {
 
 .login-btn {
     color: #244770;
+    cursor: pointer;
 }
 
 .signup-btn {
     color: #fff;
     background: #244770;
+    cursor: pointer;
 }
 
 /* mobile design */

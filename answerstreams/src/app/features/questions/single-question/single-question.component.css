@@ -11,6 +11,7 @@
 .question-heading {
     /* border: 1px solid #006600; */
     padding: .5em;
+    cursor: pointer;
 }
 
 .question-body,.answer-body {
