@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, isDevMode } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -10,9 +10,13 @@ import { RegisterComponent } from "./features/auth/register/register.component";
 import { LoginComponent } from "./features/auth/login/login.component";
 import { QuestionsComponent } from "./features/questions/questions/questions.component";
 import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
 import { AskQuestionComponent } from "./features/questions/ask-question/ask-question.component";
+
 import { SingleQuestionComponent } from "./features/questions/single-question/single-question.component";
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+
 
 @NgModule({
     declarations: [
@@ -33,6 +37,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
         AskQuestionComponent,
         SingleQuestionComponent,
         FontAwesomeModule
+        EffectsModule.forRoot([]),
+        AskQuestionComponent,
+        StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() }
     ]
 })
 export class AppModule { }

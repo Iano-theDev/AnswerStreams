@@ -1,8 +1,11 @@
+import { Comment } from "./comment.model";
+
 export interface Answer {
-    id: string;
+    answerId: string;
+    questionId: string;
+    userId: string;
     body: string;
     votes: number;
-    comments: []
-    user: string;
+    comments: Comment[]
     createdAt: string;   
 }

@@ -1,10 +1,13 @@
+import { Answer } from "./answer.model";
+import { Comment } from "./comment.model";
+
 export interface Question {
-    id: string;
+    questionId: string;
     heading: string;
     body: string;
     votes: number;
-    answers: [];
-    comments: [];
-    user: string;
+    answers: Answer[];
+    comments: Comment[];
+    userId: string;
     createdAt: string;
 }
