@@ -16,6 +16,7 @@ import { AskQuestionComponent } from "./features/questions/ask-question/ask-ques
 import { SingleQuestionComponent } from "./features/questions/single-question/single-question.component";
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
     bootstrap: [AppComponent],
     imports: [
         BrowserModule,
+        FormsModule,
         AppRoutingModule,
         HeaderComponent,
         FooterComponent,

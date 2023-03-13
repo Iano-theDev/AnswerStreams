@@ -44,6 +44,18 @@ form {
     color: rgb(87, 87, 87)
 }
 
+input.ng-invalid.ng-touched{
+    border: 1px solid red;
+}
+
+input.ng-valid.ng-touched{
+    border: 1px solid rgb(68, 227, 68);
+}
+
+.invalid-entry {
+    color: red;
+}
+
 .log-in {
     height: 3em;
     width: 100%;
@@ -53,10 +65,16 @@ form {
     border-radius: .3em;
 }
 
+.ng-valid[required], .ng-valid.required  {
+    border-left: 5px solid #1DA0FF; 
+  }
+
 .btn p a {
     color: #1DA0FF;
     text-decoration: none;
 }
+
+
 
 @media(max-width: 1200px) {
     .container {
