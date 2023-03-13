@@ -36,10 +36,10 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
         StoreModule.forRoot({}, {}),
         AskQuestionComponent,
         SingleQuestionComponent,
-        FontAwesomeModule
+        FontAwesomeModule,
         EffectsModule.forRoot([]),
         AskQuestionComponent,
-        StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() }
+        StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() })
     ]
 })
 export class AppModule { }
