@@ -1,5 +1,5 @@
 import { createFeatureSelector, createSelector } from '@ngrx/store'
-import { QuestionsState } from './questions.reducers'
+import { QuestionsState } from '../reducers/questions.reducers'
 
 export const selectQuestionState = createFeatureSelector<QuestionsState>('questions');
 

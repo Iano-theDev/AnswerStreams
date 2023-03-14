@@ -6,7 +6,7 @@ import { AppSate } from 'src/app/state/app.state';
 import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
 import { Question } from 'src/app/shared/models/question.model';
-import { QuestionService } from '../questions.service';
+import { QuestionService } from '../../../core/services/questions.service';
 import { RouterModule } from '@angular/router';
 
 @Component({
