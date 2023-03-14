@@ -1,7 +1,7 @@
 import { Action, createReducer, on } from '@ngrx/store'
-import * as QuestionActions from './questions.actions'
 import { Question } from 'src/app/shared/models/question.model';
-import { state } from '@angular/animations';
+import { state } from '@angular/animations'
+import * as QuestionActions from 'src/app/state/actions/questions.actions'
 
 export interface QuestionsState {
     questions: Question[];
