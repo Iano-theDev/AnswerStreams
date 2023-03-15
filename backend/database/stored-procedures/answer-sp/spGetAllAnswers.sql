@@ -1,0 +1,6 @@
+CREATE OR ALTER PROC spGetAllAnswers
+AS
+BEGIN
+    SELECT *
+    FROM Answer
+END

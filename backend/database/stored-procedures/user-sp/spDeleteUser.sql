@@ -1,0 +1,7 @@
+CREATE OR ALTER PROC spDeleteUser
+    @userId VARCHAR(255)
+AS
+BEGIN
+    DELETE FROM Users
+WHERE userId=@userId
+END

@@ -1,0 +1,10 @@
+CREATE TABLE Answer
+(
+  answerId VARCHAR(255) PRIMARY KEY,
+  body TEXT NOT NULL,
+  userId VARCHAR(255) NOT NULL,
+  questionId VARCHAR(255) NOT NULL,
+  createdAt DATETIME NOT NULL DEFAULT GETDATE(),
+  FOREIGN KEY (userId) REFERENCES Users(userId) ON DELETE CASCADE,
+  FOREIGN KEY (questionId) REFERENCES Questions(questionId)
+);
