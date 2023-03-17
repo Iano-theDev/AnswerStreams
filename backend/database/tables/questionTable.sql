@@ -1,0 +1,8 @@
+CREATE TABLE Question
+(
+  questionId VARCHAR(255) PRIMARY KEY,
+  title VARCHAR(MAX) NOT NULL,
+  body TEXT,
+  userId VARCHAR(255) NOT NULL,
+  FOREIGN KEY (userId) REFERENCES Users(userId) ON DELETE CASCADE
+);
