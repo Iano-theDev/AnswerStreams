@@ -6,5 +6,6 @@ CREATE TABLE QuestionVote
     value INT NOT NULL,
     createdAt DATETIME NOT NULL DEFAULT GETDATE(),
     FOREIGN KEY (userId) REFERENCES Users(userId) ON DELETE CASCADE,
-    FOREIGN KEY (questionId) REFERENCES Question(questionId)
+    FOREIGN KEY (questionId) REFERENCES Question(questionId),
+    UNIQUE (voteId)
 );
