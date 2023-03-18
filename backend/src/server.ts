@@ -1,6 +1,15 @@
-const a:number = 2;
-const b:number = 5;
+import express, { json } from 'express'
+import dotenv from 'dotenv'
+import path from 'path'
+import { checkConnection } from './config/config';
 
-const add = ()=>( a + b)
 
-console.log(add())
+
+const app = express();
+
+app.listen(4000, ()=>{
+    console.log('server running')
+})
+
+checkConnection()
+
