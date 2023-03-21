@@ -18,8 +18,6 @@ interface ExtendedRequest extends Request {
     }
 }
 
-
-
 //get all questions
 export const getAllQuestions: RequestHandler = async (req, res)=> {
     try {
@@ -85,7 +83,7 @@ export async function updateQuestion(req:ExtendedRequest, res:Response){
 
         if(question) {
             await pool.request()
-            .input('questionId',questionId)
+            .input('questionId', req.params.id)
             .input('title',title)
             .input('body', body)
             .execute('spUpdateQuestion')
