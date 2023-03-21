@@ -6,6 +6,7 @@ import questionCommentRouter from './router/question-commentRouter';
 import answerCommentRouter from './router/answer-commentRouter';
 import answerVoteRouter from './router/answer-voteRouter';
 import questionVoteRouter from './router/question-votesRouter';
+import userRouter from './router/userRouter';
 
 
 
@@ -25,6 +26,8 @@ app.use('/a-comments', answerCommentRouter)
 app.use('/a-votes', answerVoteRouter)
 
 app.use('/q-votes', questionVoteRouter)
+
+app.use('/user', userRouter)
 
 
 

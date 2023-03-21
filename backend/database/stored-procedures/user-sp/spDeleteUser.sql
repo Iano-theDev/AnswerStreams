@@ -23,6 +23,8 @@ BEGIN
         DELETE FROM Users WHERE userId = @userId
 
         COMMIT TRANSACTION
+
+        SELECT 'user records removed successfully' AS Message
     END TRY
     BEGIN CATCH
         IF @@TRANCOUNT > 0
