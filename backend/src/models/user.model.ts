@@ -1,5 +1,3 @@
-import QuestionModel from "./question.model";
-
 class UserModel {
     constructor(
         public userId: string,
