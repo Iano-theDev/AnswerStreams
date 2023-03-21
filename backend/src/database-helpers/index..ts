@@ -19,13 +19,13 @@ class DatabaseConnection {
 
     async exec(sp: string, data: {[x:string]: string }={}) {
         let emptyRequest = await (await this.pool).request()
-        //remember to remove
-        console.log("data", data);
+        //test
+        // console.log("data", data);
 
         let request = this.createRequest(emptyRequest, data)
         let result = await(await request.execute(sp)).recordset
-        // remember to remove
-        console.log("result: ", result);
+        // test
+        // console.log("result: ", result);
         
         return result
     }

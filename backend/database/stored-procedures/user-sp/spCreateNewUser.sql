@@ -8,4 +8,6 @@ BEGIN
     INSERT INTO Users
         (userId, name, email, password)
     VALUES(@userId, @name, @email, @password)
+    SELECT * FROM Users 
+    WHERE userId =@userId
 END
