@@ -5,6 +5,6 @@ CREATE TABLE AnswerComment
     userId VARCHAR(255) NOT NULL,
     answerId VARCHAR(255) NOT NULL,
     createdAt DATETIME NOT NULL DEFAULT GETDATE(),
-    FOREIGN KEY (userId) REFERENCES Users(userId) ON DELETE CASCADE,
-    FOREIGN KEY (answerId) REFERENCES Answer(answerId)
+    FOREIGN KEY (userId) REFERENCES Users(userId),
+    FOREIGN KEY (answerId) REFERENCES Answer(answerId) ON DELETE CASCADE
 );
