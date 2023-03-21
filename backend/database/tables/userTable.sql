@@ -5,6 +5,7 @@ CREATE TABLE Users
     Email VARCHAR(300) UNIQUE,
     password VARCHAR(150),
     Role VARCHAR(50) DEFAULT 'user',
+    occupation VARCHAR(255) NULL,
     imageURL VARCHAR(MAX) NULL,
     online BIT NOT NULL DEFAULT 0,
     createdAt DATETIME NOT NULL DEFAULT GETDATE()
