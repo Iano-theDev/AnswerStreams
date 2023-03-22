@@ -18,21 +18,6 @@ import { selectQuestions } from 'src/app/state/selectors/questions.selectors';
     imports: [CommonModule, HeaderComponent, FooterComponent, RouterModule]
 })
 export class QuestionsComponent implements OnInit{
-    // // questions$!: Observable<Question[]>;
-    // questions$?: Observable<Question[]>;
-
-    // constructor(private questionService:QuestionService, private store: Store<AppSate>){}
-
-    // ngOnInit(): void {
-    //     this.questions$ = this.store.select(state => state.questions);
-    //     console.log(this.questions$)
-    //   }
-
-    
-    // getQuestions(){
-    //    const myQuestion = this.questionService.getQuestions()
-    //     console.log(myQuestion)
-    // }
     questions: Question[ ] = [];
 
     constructor(private store: Store<AppState>, private questionService: QuestionService) {  

@@ -20,6 +20,8 @@ import { FormsModule } from '@angular/forms';
 import { questionReducer } from './state/reducers/questions.reducers';
 import { QuestionEffects } from './state/effects/questions.effects';
 import { HttpClientModule } from '@angular/common/http';
+import { answerReducer } from './state/reducers/answer.reducers';
+import { AnswerEffects } from './state/effects/answers.effects';
 
 
 @NgModule({
@@ -39,11 +41,11 @@ import { HttpClientModule } from '@angular/common/http';
         RegisterComponent,
         LoginComponent,
         QuestionsComponent,
-        StoreModule.forRoot({questions: questionReducer}, {}),
+        StoreModule.forRoot({questions: questionReducer, answer: answerReducer}, {}),
         AskQuestionComponent,
         SingleQuestionComponent,
         FontAwesomeModule,
-        EffectsModule.forRoot([QuestionEffects]),
+        EffectsModule.forRoot([QuestionEffects, AnswerEffects]),
         AskQuestionComponent,
         StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() })
     ]

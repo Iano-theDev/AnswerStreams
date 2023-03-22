@@ -21,5 +21,4 @@ export class QuestionEffects {
             catchError(error => of(QuestionsActions.loadQuestionsFailure({ error })))
         )),
     ));
-    
 }
