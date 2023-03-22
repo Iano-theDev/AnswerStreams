@@ -3,7 +3,7 @@ import { Comment } from "./comment.model";
 
 export interface Question {
     questionId: string;
-    heading: string;
+    title: string;
     body: string;
     votes: number;
     answers: Answer[];

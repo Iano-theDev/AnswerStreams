@@ -7,12 +7,13 @@ import answerCommentRouter from './router/answer-commentRouter';
 import answerVoteRouter from './router/answer-voteRouter';
 import questionVoteRouter from './router/question-votesRouter';
 import userRouter from './router/userRouter';
+import cors from 'cors'
 
 
 
 const app = express();
 
-
+app.use(cors())
 app.use(json())
 
 app.use('/questions', questionsRouter);
@@ -34,6 +35,7 @@ app.use('/user', userRouter)
 app.listen(4000, ()=>{
     console.log('server running')
 })
+
 
 // checkConnection()
 

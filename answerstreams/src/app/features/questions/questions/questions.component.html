@@ -4,7 +4,7 @@
         <h2>All Questions</h2>
         <button class="ask-question" routerLink="/ask">Ask</button>
     </div>
-    <div class="question-container" *ngFor="let number of [0,1,2,3]" >
+    <div class="question-container" *ngFor="let question of questions" >
         <div class="question">
             <div class="question-activity">
                 <div class="votes">
@@ -15,17 +15,18 @@
                 </div>
             </div>
             <div class="question-heading">
-                <h3 (click)="getQuestions()" routerLink="/questions/1">Why is the sky blue?</h3>
+                <!-- <h3 (click)="getQuestions()" routerLink="/questions/1">How to find money?</h3> -->
+                <h3 [routerLink]="question.questionId">{{question.title}}</h3>
             </div>
             <div class="question-body">
-                <p>Lately i have been thinking about the sky and why its color rarely changes, on very rare occasions .......</p>
+                <p>{{question.body}}</p>
             </div>
             <div class="user-details">
                 <div class="user">
-                    <p>Ian Kamande</p>
+                    <p>{{question.userId}}</p>
                 </div>
                 <div class="date">
-                    <p>12/03/2021</p>
+                    <p>{{question.createdAt| date:'short':'UTC'}}</p>
                 </div>
             </div>
         </div>

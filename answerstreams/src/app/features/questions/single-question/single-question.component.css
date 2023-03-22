@@ -2,6 +2,8 @@
     background: #E1E9EE;
     padding: .3em;
     font-family: 'Poppins', sans-serif;
+    padding-left: 4em;
+    padding-right: 4em;
 }
 
 .question-area {
@@ -27,6 +29,7 @@
     justify-content: center;
     align-items: center;
     gap: .1em;
+    /* padding-left: 6em; */
 }
 
 .text-area {
@@ -35,7 +38,7 @@
 }
 
 .comments-area {
-    padding-left: 16em;
+    /* padding-left: 16em; */
     font-size: 14px;
     /* border: 1px solid rgb(0, 0, 255); */
 }
@@ -61,8 +64,9 @@
 
 .add-comment textarea {
     width: 100%;
-    border-radius: .5em;
+    /* border-radius: .5em; */
     outline: none;
+    border: .1px solid #ccc;
 }
 
 .add-comment button {

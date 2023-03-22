@@ -17,6 +17,11 @@ import { SingleQuestionComponent } from "./features/questions/single-question/si
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { FormsModule } from '@angular/forms';
+import { questionReducer } from './state/reducers/questions.reducers';
+import { QuestionEffects } from './state/effects/questions.effects';
+import { HttpClientModule } from '@angular/common/http';
+import { answerReducer } from './state/reducers/answer.reducers';
+import { AnswerEffects } from './state/effects/answers.effects';
 
 
 @NgModule({
@@ -26,6 +31,7 @@ import { FormsModule } from '@angular/forms';
     providers: [],
     bootstrap: [AppComponent],
     imports: [
+        HttpClientModule,
         BrowserModule,
         FormsModule,
         AppRoutingModule,
@@ -35,11 +41,11 @@ import { FormsModule } from '@angular/forms';
         RegisterComponent,
         LoginComponent,
         QuestionsComponent,
-        StoreModule.forRoot({}, {}),
+        StoreModule.forRoot({questions: questionReducer, answers: answerReducer}, {}),
         AskQuestionComponent,
         SingleQuestionComponent,
         FontAwesomeModule,
-        EffectsModule.forRoot([]),
+        EffectsModule.forRoot([QuestionEffects, AnswerEffects]),
         AskQuestionComponent,
         StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() })
     ]
