@@ -41,7 +41,7 @@ import { AnswerEffects } from './state/effects/answers.effects';
         RegisterComponent,
         LoginComponent,
         QuestionsComponent,
-        StoreModule.forRoot({questions: questionReducer, answer: answerReducer}, {}),
+        StoreModule.forRoot({questions: questionReducer, answers: answerReducer}, {}),
         AskQuestionComponent,
         SingleQuestionComponent,
         FontAwesomeModule,

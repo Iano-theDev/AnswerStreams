@@ -4,10 +4,10 @@
     <div class="question-area">
         <div class="question-heading">
             <div class="heading">
-                <h2>Why is the sky always blue?</h2>
+                <h2>{{question?.title}}</h2>
             </div>
             <div class="date">
-                <p>12/03/2021</p>
+                <p>{{question?.createdAt | date:'short': 'UTC'}}</p>
             </div>
         </div>
         <div class="question-body">
@@ -19,11 +19,11 @@
                 <fa-icon class="thumbs" [icon]="faThumbsDown"></fa-icon>
             </div>
             <div class="text-area">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste harum numquam, culpa placeat tempora, amet earum rem eveniet nemo voluptate odit exercitationem quisquam deserunt? Rem numquam porro eos earum provident.</p>
+                <p>{{question?.body}}</p>
             </div>
         </div>
-        <hr>
-        <div class="comments-area">
+        <!-- <hr> -->
+        <!-- <div class="comments-area">
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat voluptatibus omnis est laboriosam repudiandae ab dolorum ducimus magni. Nulla accusamus saepe eos tempore! Debitis reprehenderit voluptas architecto molestias accusamus non.</p>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat voluptatibus omnis est laboriosam repudiandae ab dolorum ducimus magni. Nulla accusamus saepe eos tempore! Debitis reprehenderit voluptas architecto molestias accusamus non.</p>
 
@@ -33,11 +33,12 @@
                     <button>add-comment</button>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
     <hr>
-    <div class="answer-area">
-        <h4>Answers</h4>
+    <h4>Answers</h4>
+    <div class="answer-area" *ngFor="let answer of answers">
+        <hr>
         <div class="answer-body">
             <div class="votes-area">
                 <fa-icon class="thumbs" [icon]="faThumbsUp"></fa-icon>
@@ -47,7 +48,7 @@
                 <fa-icon class="thumbs" [icon]="faThumbsDown"></fa-icon>
             </div>
             <div class="text-area">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste harum numquam, culpa placeat tempora, amet earum rem eveniet nemo voluptate odit exercitationem quisquam deserunt? Rem numquam porro eos earum provident.</p>
+                <p>{{answer.body}}</p>
             </div>
         </div>
         <hr>
@@ -56,13 +57,13 @@
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat voluptatibus omnis est laboriosam repudiandae ab dolorum ducimus magni. Nulla accusamus saepe eos tempore! Debitis reprehenderit voluptas architecto molestias accusamus non.</p>
             <div class="add-comment">
                 <textarea name="" id="" cols="30" rows="2"></textarea>
-                <button>add-comment</button>
+                <button>comment</button>
             </div>
         </div>
-        <div class="add-answer">
-            <textarea name="" id="" cols="30" rows="3"></textarea>
-            <button (click)="showInput = !(showInput != false)">Add answer</button>
-        </div>
+    </div>
+    <div class="add-answer">
+        <textarea name="" id="" cols="30" rows="3"></textarea>
+        <button>Add answer</button>
     </div>
 </div>
 
