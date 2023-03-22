@@ -5,5 +5,15 @@ export const selectQuestionState = createFeatureSelector<QuestionsState>('questi
 
 export const selectQuestions = createSelector(
     selectQuestionState,
-    state => state.questions
+    (state: QuestionsState) => state.questions
+);
+
+export const selectQuestionsLoading = createSelector(
+    selectQuestionState,
+    (state: QuestionsState) => state.loading
+);
+
+export const selectQuestionsError = createSelector(
+    selectQuestionState,
+    (state: QuestionsState) => state.error
 );
