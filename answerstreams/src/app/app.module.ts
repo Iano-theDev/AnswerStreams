@@ -22,6 +22,10 @@ import { QuestionEffects } from './state/effects/questions.effects';
 import { HttpClientModule } from '@angular/common/http';
 import { answerReducer } from './state/reducers/answer.reducers';
 import { AnswerEffects } from './state/effects/answers.effects';
+import { loggedInUserReducer } from './state/reducers/login.reducers';
+import { LoggedInUserEffects } from './state/effects/login.effects';
+import { RegisterUserEffects } from './state/effects/register.effects';
+import { registerUserReducer } from './state/reducers/register.reducers';
 
 
 @NgModule({
@@ -41,11 +45,11 @@ import { AnswerEffects } from './state/effects/answers.effects';
         RegisterComponent,
         LoginComponent,
         QuestionsComponent,
-        StoreModule.forRoot({questions: questionReducer, answers: answerReducer}, {}),
+        StoreModule.forRoot({questions: questionReducer, answers: answerReducer, loggedInUser: loggedInUserReducer, registerUser: registerUserReducer }, {}),
         AskQuestionComponent,
         SingleQuestionComponent,
         FontAwesomeModule,
-        EffectsModule.forRoot([QuestionEffects, AnswerEffects]),
+        EffectsModule.forRoot([QuestionEffects, AnswerEffects, LoggedInUserEffects, RegisterUserEffects]),
         AskQuestionComponent,
         StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() })
     ]
