@@ -7,6 +7,7 @@ import QuestionModel from "../models/question.model";
 
 interface ExtendedRequest extends Request {
     body: {
+        user?: any;
         questionId: string;
         userId: string;
         title: string;
@@ -55,11 +56,11 @@ export const getSingleQuestion=async(req:ExtendedRequest, res: Response)=>{
 export async function addQuestion(req:ExtendedRequest, res: Response) {
     try {
         const questionId = uid()
-        const {title, body, userId} = req.body
+        const {title, body} = req.body
         const pool = await mssql.connect(sqlConfig)
         await pool.request()
         .input('questionId',questionId)
-        .input('userId',userId)
+        .input('userId',req.body.user.userId)
         .input('title',title)
         .input('body', body)
         .execute('spCreateNewQuestion')

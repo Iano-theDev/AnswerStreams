@@ -9,6 +9,7 @@ import { Question } from 'src/app/shared/models/question.model';
 import { QuestionService } from '../../../core/services/questions.service';
 import { RouterModule } from '@angular/router';
 import { selectQuestions } from 'src/app/state/selectors/questions.selectors';
+import * as QuestionActions from 'src/app/state/actions/questions.actions'
 
 @Component({
     selector: 'app-questions',
@@ -32,6 +33,7 @@ export class QuestionsComponent implements OnInit{
           }
         console.log('console works')
       });
+      this.store.dispatch(QuestionActions.loadQuestions())
 
     // **********************************************
     // this.questionService.getQuestions().subscribe(

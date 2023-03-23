@@ -21,4 +21,14 @@ export class QuestionEffects {
             catchError(error => of(QuestionsActions.loadQuestionsFailure({ error })))
         )),
     ));
+
+    addQuestion$ = createEffect(() => this.actions$.pipe(
+        ofType(QuestionsActions.addQuestion),
+        mergeMap((action) => this.questionService.postQuestion(action.question).pipe(
+            map(question => QuestionsActions.addQuestionSuccess(question )),
+            catchError(error => of(QuestionsActions.addQuestionFailure({ error })))
+        )),
+    ));
+
+
 }

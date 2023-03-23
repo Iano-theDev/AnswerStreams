@@ -48,24 +48,6 @@ export class SingleQuestionComponent implements OnInit {
       console.log('console works')
     });
 
-
-      // this.store.select(selectAnswers).subscribe(answers => {
-      //   console.log("select",answers);
-        
-        
-      //   // (error: any) => {
-      //   //   console.log(error);
-      //   // }
-      // })
-
-    // this.store.select(selectAnswers).subscribe(answers => {
-    //   this.answers = answers as Answer[];
-    //   (error: any) => {
-    //     console.log(error);
-    //     console.log(this.answers)
-    //   }
-    // })
-
     this.route.params.subscribe(params => {
       this.store.select(selectAnswers).subscribe(answers => {
         this.answers = answers.filter((answer: Answer) => answer.questionId === params['id'])

@@ -19,20 +19,27 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { FormsModule } from '@angular/forms';
 import { questionReducer } from './state/reducers/questions.reducers';
 import { QuestionEffects } from './state/effects/questions.effects';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { answerReducer } from './state/reducers/answer.reducers';
 import { AnswerEffects } from './state/effects/answers.effects';
 import { loggedInUserReducer } from './state/reducers/login.reducers';
 import { LoggedInUserEffects } from './state/effects/login.effects';
 import { RegisterUserEffects } from './state/effects/register.effects';
 import { registerUserReducer } from './state/reducers/register.reducers';
+import { TokenInterceptorService } from './core/services/token-interceptor.service';
 
 
 @NgModule({
     declarations: [
         AppComponent,
     ],
-    providers: [],
+    providers: [
+        {
+            provide: HTTP_INTERCEPTORS,
+            useClass: TokenInterceptorService,
+            multi: true
+        }
+    ],
     bootstrap: [AppComponent],
     imports: [
         HttpClientModule,

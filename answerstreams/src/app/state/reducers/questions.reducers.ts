@@ -30,5 +30,28 @@ export const questionReducer = createReducer (
         ...state,
         loading: false,
         error
-    }))
+    })),
+    on(QuestionActions.addQuestion, (state, { question }) => {
+        return {
+            ...state,
+            loading: true
+        }
+    }
+    ),
+
+    on(QuestionActions.addQuestionSuccess, (state, { question }) => {
+        return {
+            ...state,
+            questions: [...state.questions, question]
+        }
+    }
+    ),
+
+    on(QuestionActions.addQuestionFailure, (state, { error }) => {
+        return {
+            ...state,
+            error
+        }
+    }
+    ),
 );
