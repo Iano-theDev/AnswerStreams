@@ -38,6 +38,19 @@ form {
     border-radius: .3em;
     color: rgb(111, 105, 105);
     border: .1px solid rgb(154, 154, 154);
+    outline: none;
+}
+
+input.ng-invalid, input.ng-touched{
+    border: 1px solid rgb(190, 95, 95);
+}
+
+input.ng-valid, input.ng-touched{
+    border: 1px solid rgb(108, 167, 108);
+}
+
+.invalid-entry {
+    color: rgb(190, 95, 95);
 }
 
 .input-container label {

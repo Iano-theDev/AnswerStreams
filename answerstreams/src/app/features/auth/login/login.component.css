@@ -38,22 +38,23 @@ form {
     border-radius: .3em;
     color: rgb(111, 105, 105);
     border: .1px solid rgb(154, 154, 154);
+    outline: none;
 }
 
 .input-container label {
     color: rgb(87, 87, 87)
 }
 
-input.ng-invalid.ng-touched{
-    border: 1px solid red;
+input.ng-invalid, input.ng-touched{
+    border: 1px solid rgb(190, 95, 95);
 }
 
-input.ng-valid.ng-touched{
-    border: 1px solid rgb(68, 227, 68);
+input.ng-valid, input.ng-touched{
+    border: 1px solid rgb(108, 167, 108);
 }
 
 .invalid-entry {
-    color: red;
+    color: rgb(190, 95, 95);
 }
 
 .log-in {
@@ -63,6 +64,7 @@ input.ng-valid.ng-touched{
     color: #fff;
     border: none;
     border-radius: .3em;
+    cursor: pointer;
 }
 
 .ng-valid[required], .ng-valid.required  {

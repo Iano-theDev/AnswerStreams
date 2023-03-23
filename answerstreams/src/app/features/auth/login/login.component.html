@@ -1,20 +1,20 @@
 <app-header></app-header>
 <div class="container">
-    <form ngSubmit="submitForm(form)" #form ="ngForm">
+    <form #loginForm ="ngForm" (ngSubmit)="onSubmit(loginForm)">
         <h3>LOG IN</h3>
         <div class="input-container">
             <label for="email" >Email</label>
-            <input type="email" name="email" ngModel required email pattern="email" #email="ngModel">
-            <span *ngIf="email.invalid && email.touched" class="invalid-entry">Please enter a valid email address</span>
+            <input type="email" name="email" ngModel required email pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"#email="ngModel">
+            <span *ngIf="email.touched && email.invalid " class="invalid-entry">Please enter a valid email address</span>
         </div>
         <div class="input-container">
             <label for="passowrd" >Password</label>
             <input type="password" name="password" ngModel #password="ngModel" required>
-            <span class="invalid-entry" *ngIf="password.invalid && password.touched">This fields cant be empty</span>
+            <span class="invalid-entry" *ngIf="password.touched && password.invalid">This fields cant be empty</span>
         </div>
         <div class="btn">
-            <button class="log-in" (click)="submitForm(form)" [disabled]="form.invalid">Log In</button>
-            <p>don't have an account ? click <a href="">sign-up</a> instead</p>
+            <button class="log-in">Log In</button>
+            <p>don't have an account ? click <a routerLink="/register">sign-up</a> instead</p>
         </div>
     </form>
 </div>
