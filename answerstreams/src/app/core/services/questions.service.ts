@@ -14,4 +14,8 @@ export class QuestionService{
     getQuestions() {
         return this.http.get<Question[]>('http://localhost:4000/questions/')
     }
+
+    postQuestion(question: Question) {
+        return this.http.post<Question>('http://localhost:4000/questions', question)
+    }
 }

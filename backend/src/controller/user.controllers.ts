@@ -42,7 +42,7 @@ export const registerUser = async (req: ExtendedRequest, res: Response) => {
 
             if (newUser.length !== 0) {
                 const token = jwt.sign(user, process.env.JWT_SECRET as string, { expiresIn: '1d' })
-                res.status(201).json({ token })
+                res.status(201).json({ token, newUser })
             } else {
                 res.status(422).json({ message: 'error creating user' })
             }
@@ -68,7 +68,8 @@ export const logUserIn = async (req: ExtendedRequest, res: Response) => {
 
                 if (validPassword) {
                     const token = jwt.sign(user[0], process.env.JWT_SECRET as string, { expiresIn: '1d' })
-                    res.status(201).json({ 'token': token, user: { id: user[0].id, name: user[0].name, email: user[0].email, isAdmin: user[0].isAdmin } })
+                    // res.status(201).json({ 'token': token, 'user': { id: user[0].id, name: user[0].name, email: user[0].email, isAdmin: user[0].isAdmin } })
+                    res.status(201).json({ token, user })
                 } else {
                     res.status(500).json({ message: 'Invalid password' })
                 }

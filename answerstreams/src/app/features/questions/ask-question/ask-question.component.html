@@ -2,14 +2,15 @@
 <div class="body">
     <div class="container">
         <h3>Add a question</h3>
-        <form action="">
+        <form #askForm ="ngForm" (ngSubmit)="onSubmit(askForm)" >
             <div class="details-container">
                 <label for=""><b>Title: </b> enter the title to your question </label>
-                <input type="text">
+                <input type="text" name="title" ngModel #title="ngModel" required>
+                <span class="invalid-entry" *ngIf="title.touched && title.invalid">This fields cant be empty</span>
             </div>
             <div class="details-container">
                 <label for=""><b>Details:</b> describe the details to the question with the title you described </label>
-                <textarea name="" id="" cols="30" rows="10"></textarea>
+                <textarea name="body" ngModel  cols="30" rows="10" #describe="ngModel" required></textarea>
             </div>
             <div class="btn-container">
                 <button class="ask-question">Ask question</button>
