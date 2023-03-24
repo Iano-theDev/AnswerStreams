@@ -4,7 +4,7 @@ import { HeaderComponent } from "../../../shared/components/header/header.compon
 import { FooterComponent } from "../../../shared/components/footer/footer.component";
 import { FormsModule, NgForm } from '@angular/forms';
 import { QuestionService } from 'src/app/core/services/questions.service';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import * as QuestionsActions from 'src/app/state/actions/questions.actions';
 import { Store } from '@ngrx/store';
 import { AppState } from 'src/app/state/app.state';
@@ -17,7 +17,7 @@ import { UserProfileComponent } from '../../user-profile/user-profile.component'
     standalone: true,
     templateUrl: './ask-question.component.html',
     styleUrls: ['./ask-question.component.css'],
-    imports: [CommonModule, HeaderComponent, FooterComponent, FormsModule]
+    imports: [CommonModule, HeaderComponent, FooterComponent, FormsModule, RouterModule]
 })
 export class AskQuestionComponent implements OnInit{
 

@@ -12,7 +12,7 @@ import * as AnswerActions from 'src/app/state/actions/answer.actions'
 import { selectQuestions } from 'src/app/state/selectors/questions.selectors';
 import { AppState } from 'src/app/state/app.state';
 import { QuestionService } from 'src/app/core/services/questions.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterModule } from '@angular/router';
 import { Answer } from 'src/app/shared/models/answer.model';
 import { selectAnswers } from 'src/app/state/selectors/answer.selectors';
 
@@ -22,7 +22,7 @@ import { selectAnswers } from 'src/app/state/selectors/answer.selectors';
   standalone: true,
   templateUrl: './single-question.component.html',
   styleUrls: ['./single-question.component.css'],
-  imports: [CommonModule, HeaderComponent, FontAwesomeModule, FooterComponent, QuestionsComponent]
+  imports: [CommonModule, HeaderComponent, FontAwesomeModule, FooterComponent, QuestionsComponent, RouterModule]
 })
 export class SingleQuestionComponent implements OnInit {
   showInput?: boolean;

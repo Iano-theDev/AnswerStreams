@@ -11,8 +11,10 @@
             <input type="text" placeholder="Search...">
         </div>
         <div class="auth-area">
-            <button class="login-btn" routerLink="/login">Log in</button>
-            <button class="signup-btn" routerLink="/register">Sign up</button>
+            <button class="login-btn" *ngIf = "!loggedIn" routerLink="/login">Log in</button>
+            <button class="signup-btn" *ngIf = "!loggedIn" routerLink="/register">Sign up</button>
+            <button class="signup-btn" *ngIf = "loggedIn" routerLink="/profile">Profile</button>
+            <button class="login-btn"*ngIf = "loggedIn" (click)="logout()" routerLink="/login">Log Out</button>
             <div class="icon"></div>
         </div>
     </div>
