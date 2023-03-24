@@ -1,0 +1,66 @@
+.container {
+    /* border: 1px solid red; */
+    margin: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    font-family: 'Poppins', sans-serif;
+}
+
+.user {
+    /* border: 1px solid blue; */
+    display: flex;
+    flex-direction: row;
+}
+
+.profile-picture {
+    width: 200px;
+    height: 200px;
+    /* background: rgb(145, 129, 161); */
+    margin: .5em;
+    background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/b41ebc74-a9a7-41c3-98c6-4e68c588fca9/deh0oan-2300327b-ca18-403e-82c4-2e30604484d1.png/v1/fill/w_1280,h_1475,strp/bart_simpson_cool_look_by_captainedwardteague_deh0oan-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTQ3NSIsInBhdGgiOiJcL2ZcL2I0MWViYzc0LWE5YTctNDFjMy05OGM2LTRlNjhjNTg4ZmNhOVwvZGVoMG9hbi0yMzAwMzI3Yi1jYTE4LTQwM2UtODJjNC0yZTMwNjA0NDg0ZDEucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.Bb4Og_r3PM8imq_z9PDw8OiNrkf1PRqRwNyMwyKxb_4');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1px solid #ccc;
+    /* border-radius: 50%; */
+}
+
+.user-details {
+    margin-left: 2em;;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.tags {
+    display: flex;
+    flex-direction: row;
+    gap: .1em;
+}
+
+.tag{
+    /* width: 7em; */
+    background: #1c3148;
+    color: #fff;
+    border: none;
+    border-radius: .1em;
+    padding: .8em;
+    margin-bottom: 1em;
+}
+
+.tag:hover{
+    /* width: 7em; */
+    background: #285484;
+    color: #fff;
+    border: none;
+    border-radius: .1em;
+    padding: .8em;
+    margin-bottom: 1em;
+}
+
+
+.activity-container {
+    min-height: 40vh;
+    border: 1px solid #ccc;
+}

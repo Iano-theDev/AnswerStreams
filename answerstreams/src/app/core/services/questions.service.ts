@@ -8,6 +8,9 @@ import { Observable } from "rxjs";
     providedIn: 'root'
 })
 export class QuestionService{
+    addQuestion(question: Question) {
+        throw new Error("Method not implemented.");
+    }
     subscribe: any;
     constructor(private http: HttpClient) { }
 

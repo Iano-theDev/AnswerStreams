@@ -102,8 +102,9 @@ a {
 
     .container {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         width: 100%;
+        justify-content: space-between;
         padding: .3em;
         align-items: center;
         /* gap: 5%; */
@@ -121,10 +122,15 @@ a {
     }
 
     .search {
-        min-width: 100%;
+        /* min-width: 100%; */
+        display: none;
+        justify-self: flex-end;
     }
 
     .auth-area {
-        display: none;
+        /* display: none; */
+        min-width: 100%;
+        display: flex;
+        justify-content: end;
     }
 }
