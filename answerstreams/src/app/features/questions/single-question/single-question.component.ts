@@ -58,5 +58,8 @@ export class SingleQuestionComponent implements OnInit {
     
 
   }
+  addAnswer() {
+    
+  }
 }
 

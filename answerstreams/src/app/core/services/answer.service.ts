@@ -8,11 +8,15 @@ import { Observable } from "rxjs";
 })
 export class AnswerService {
     subsacribe: any;
+    answersUrl: string = 'http://localhost:4000/answers'
 
     constructor(private http: HttpClient){}
 
     getAnswers(): Observable<Answer[]>{
-        return this.http.get<Answer[]>('http://localhost:4000/answers')
+        return this.http.get<Answer[]>(this.answersUrl)
+    }
+    addAnswer(answer: any): Observable<any>{
+        return this.http.post(this.answersUrl, answer)
     }
 }
 
