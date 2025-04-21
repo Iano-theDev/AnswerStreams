@@ -14,7 +14,6 @@ import { UserProfileComponent } from '../../user-profile/user-profile.component'
 
 @Component({
     selector: 'app-ask-question',
-    standalone: true,
     templateUrl: './ask-question.component.html',
     styleUrls: ['./ask-question.component.css'],
     imports: [CommonModule, HeaderComponent, FooterComponent, FormsModule, RouterModule]

@@ -58,7 +58,7 @@ import { TokenInterceptorService } from './core/services/token-interceptor.servi
         FontAwesomeModule,
         EffectsModule.forRoot([QuestionEffects, AnswerEffects, LoggedInUserEffects, RegisterUserEffects]),
         AskQuestionComponent,
-        StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() })
+        StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() , connectInZone: true})
     ]
 })
 export class AppModule { }

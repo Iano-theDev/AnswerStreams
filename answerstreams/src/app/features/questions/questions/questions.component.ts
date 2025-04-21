@@ -13,7 +13,6 @@ import * as QuestionActions from 'src/app/state/actions/questions.actions'
 
 @Component({
     selector: 'app-questions',
-    standalone: true,
     templateUrl: './questions.component.html',
     styleUrls: ['./questions.component.css'],
     imports: [CommonModule, HeaderComponent, FooterComponent, RouterModule]

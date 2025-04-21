@@ -18,11 +18,10 @@ import { selectAnswers } from 'src/app/state/selectors/answer.selectors';
 
 
 @Component({
-  selector: 'app-single-question',
-  standalone: true,
-  templateUrl: './single-question.component.html',
-  styleUrls: ['./single-question.component.css'],
-  imports: [CommonModule, HeaderComponent, FontAwesomeModule, FooterComponent, QuestionsComponent, RouterModule]
+    selector: 'app-single-question',
+    templateUrl: './single-question.component.html',
+    styleUrls: ['./single-question.component.css'],
+    imports: [CommonModule, HeaderComponent, FontAwesomeModule, FooterComponent, QuestionsComponent, RouterModule]
 })
 export class SingleQuestionComponent implements OnInit {
   showInput?: boolean;

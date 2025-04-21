@@ -16,12 +16,10 @@ import * as loginActions from "src/app/state/actions/login.actions"
 
 
 @Component({
-  selector: 'app-login',
-  standalone: true,
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css'],
-  imports: [CommonModule, FooterComponent, HeaderComponent, FormsModule, RouterModule]
-
+    selector: 'app-login',
+    templateUrl: './login.component.html',
+    styleUrls: ['./login.component.css'],
+    imports: [CommonModule, FooterComponent, HeaderComponent, FormsModule, RouterModule]
 })
 export class LoginComponent implements OnInit {
   loginForm!: NgForm;

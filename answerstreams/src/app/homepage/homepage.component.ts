@@ -6,7 +6,6 @@ import { RouterModule } from '@angular/router';
 
 @Component({
     selector: 'app-homepage',
-    standalone: true,
     templateUrl: './homepage.component.html',
     styleUrls: ['./homepage.component.css'],
     imports: [CommonModule, HeaderComponent, FooterComponent, RouterModule]
