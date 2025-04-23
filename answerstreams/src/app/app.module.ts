@@ -14,7 +14,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { AskQuestionComponent } from "./features/questions/ask-question/ask-question.component";
 
 import { SingleQuestionComponent } from "./features/questions/single-question/single-question.component";
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+// import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { FormsModule } from '@angular/forms';
 import { questionReducer } from './state/reducers/questions.reducers';
@@ -27,6 +27,7 @@ import { LoggedInUserEffects } from './state/effects/login.effects';
 import { RegisterUserEffects } from './state/effects/register.effects';
 import { registerUserReducer } from './state/reducers/register.reducers';
 import { TokenInterceptorService } from './core/services/token-interceptor.service';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -52,10 +53,11 @@ import { TokenInterceptorService } from './core/services/token-interceptor.servi
         RegisterComponent,
         LoginComponent,
         QuestionsComponent,
+        RouterModule,
         StoreModule.forRoot({questions: questionReducer, answers: answerReducer, loggedInUser: loggedInUserReducer, registerUser: registerUserReducer }, {}),
         AskQuestionComponent,
         SingleQuestionComponent,
-        FontAwesomeModule,
+        // FontAwesomeModule,
         EffectsModule.forRoot([QuestionEffects, AnswerEffects, LoggedInUserEffects, RegisterUserEffects]),
         AskQuestionComponent,
         StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() , connectInZone: true})

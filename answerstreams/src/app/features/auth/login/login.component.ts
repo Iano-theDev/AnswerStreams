@@ -12,6 +12,8 @@ import { LoginService } from 'src/app/core/services/login.service';
 import { IsAuthenticatedService } from 'src/app/core/services/is-authenticated.service';
 import { AppState } from 'src/app/state/app.state';
 import * as loginActions from "src/app/state/actions/login.actions"
+import { MessageService } from 'primeng/api';
+import { ToastModule } from 'primeng/toast'
 
 
 
@@ -19,7 +21,8 @@ import * as loginActions from "src/app/state/actions/login.actions"
     selector: 'app-login',
     templateUrl: './login.component.html',
     styleUrls: ['./login.component.css'],
-    imports: [CommonModule, FooterComponent, HeaderComponent, FormsModule, RouterModule]
+    imports: [CommonModule, FooterComponent, HeaderComponent, FormsModule, RouterModule, ToastModule],
+    providers: [MessageService]
 })
 export class LoginComponent implements OnInit {
   loginForm!: NgForm;
@@ -28,7 +31,7 @@ export class LoginComponent implements OnInit {
   isLoading: boolean = false;
   error: string | null = null;
 
-  constructor(private router: Router, private store: Store<AppState>, private loginService: LoginService, private isAuthenticated: IsAuthenticatedService) { }
+  constructor(private router: Router, private store: Store<AppState>, private loginService: LoginService, private isAuthenticated: IsAuthenticatedService, private messageService: MessageService) { }
 
   ngOnInit(): void {
 
@@ -49,6 +52,9 @@ export class LoginComponent implements OnInit {
       })
       this.store.select(selectLoggedInUserError).subscribe((error) => {
         this.error = error;
+        this.messageService.add({severity: 'error', summary: 'Login Error', detail: error.message})
+
+        console.log("Error logging in: ", error)
       })
     }
 
