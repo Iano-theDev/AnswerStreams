@@ -71,10 +71,10 @@ export const logUserIn = async (req: ExtendedRequest, res: Response) => {
                     // res.status(201).json({ 'token': token, 'user': { id: user[0].id, name: user[0].name, email: user[0].email, isAdmin: user[0].isAdmin } })
                     res.status(201).json({ token, user })
                 } else {
-                    res.status(500).json({ message: 'Invalid password' })
+                    res.status(403).json({ message: 'Unauthorized credentials' })
                 }
             } else {
-                res.status(500).json({ message: 'Invalid email' })
+                res.status(400).json({ message: 'Invalid email' })
             }
         } else {
             res.status(500).json({ message: 'Error connecting to database' })
