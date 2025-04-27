@@ -4,7 +4,6 @@
 The tool used for developing this designs is figma.
 
 ### This is what the final product is supposed to look like:
-[AnswerStreams.pdf](https://github.com/Iano-theDev/AnswerStreams/files/10902869/AnswerStreams.pdf)
 <br>
 Here are some images of the same.
 ## HomePage
