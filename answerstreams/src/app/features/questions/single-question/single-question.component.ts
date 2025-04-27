@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from "../../../shared/components/header/header.component";
 import { FooterComponent } from "../../../shared/components/footer/footer.component";
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faThumbsDown, faThumbsUp } from '@fortawesome/free-solid-svg-icons';
+// import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+// import { faThumbsDown, faThumbsUp } from '@fortawesome/free-solid-svg-icons';
 import { QuestionsComponent } from '../questions/questions.component';
 import { Question } from 'src/app/shared/models/question.model';
 import { Store } from '@ngrx/store';
@@ -18,16 +18,15 @@ import { selectAnswers } from 'src/app/state/selectors/answer.selectors';
 
 
 @Component({
-  selector: 'app-single-question',
-  standalone: true,
-  templateUrl: './single-question.component.html',
-  styleUrls: ['./single-question.component.css'],
-  imports: [CommonModule, HeaderComponent, FontAwesomeModule, FooterComponent, QuestionsComponent, RouterModule]
+    selector: 'app-single-question',
+    templateUrl: './single-question.component.html',
+    styleUrls: ['./single-question.component.css'],
+    imports: [CommonModule, HeaderComponent, FooterComponent, QuestionsComponent, RouterModule]
 })
 export class SingleQuestionComponent implements OnInit {
   showInput?: boolean;
-  faThumbsDown = faThumbsDown;
-  faThumbsUp = faThumbsUp;
+  // faThumbsDown = faThumbsDown;
+  // faThumbsUp = faThumbsUp;
 
   question: Question | undefined
 
@@ -57,6 +56,9 @@ export class SingleQuestionComponent implements OnInit {
     
     
 
+  }
+  addAnswer() {
+    
   }
 }
 

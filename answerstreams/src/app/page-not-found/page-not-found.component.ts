@@ -3,10 +3,9 @@ import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-page-not-found',
-  standalone: true,
-  imports: [CommonModule],
-  template: `
+    selector: 'app-page-not-found',
+    imports: [CommonModule],
+    template: `
   <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh;">
     <h1 style="font-size: 48px; margin-bottom: 16px;">Page Not Found</h1>
     <p style="font-size: 24px; margin-bottom: 32px;">Sorry, the page you are looking for does not exist.<br>... or you have been logged out!</p>
@@ -14,7 +13,7 @@ import { Router } from '@angular/router';
             (click)="goToHomePage()">Go to homepage</button>
   </div>
 `,
-  styleUrls: ['./page-not-found.component.css']
+    styleUrls: ['./page-not-found.component.css']
 })
 export class PageNotFoundComponent {
 

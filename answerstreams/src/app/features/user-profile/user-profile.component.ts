@@ -13,11 +13,10 @@ import { Answer } from 'src/app/shared/models/answer.model';
 import { selectAnswers } from 'src/app/state/selectors/answer.selectors';
 
 @Component({
-  selector: 'app-user-profile',
-  standalone: true,
-  imports: [CommonModule, HeaderComponent, FooterComponent],
-  templateUrl: './user-profile.component.html',
-  styleUrls: ['./user-profile.component.css']
+    selector: 'app-user-profile',
+    imports: [CommonModule, HeaderComponent, FooterComponent],
+    templateUrl: './user-profile.component.html',
+    styleUrls: ['./user-profile.component.css']
 })
 export class UserProfileComponent implements OnInit{
   question: Question | undefined

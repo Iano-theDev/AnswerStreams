@@ -12,7 +12,6 @@ import { selectLoggedInUser } from 'src/app/state/selectors/login.selectors';
 
 @Component({
     selector: 'app-register',
-    standalone: true,
     templateUrl: './register.component.html',
     styleUrls: ['./register.component.css'],
     imports: [CommonModule, HeaderComponent, FooterComponent, RouterModule, FormsModule]

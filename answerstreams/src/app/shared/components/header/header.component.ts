@@ -5,11 +5,10 @@ import { LoginService } from 'src/app/core/services/login.service';
 import { IsAuthenticatedService } from 'src/app/core/services/is-authenticated.service';
 
 @Component({
-  selector: 'app-header',
-  standalone: true,
-  imports: [CommonModule, RouterModule],
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+    selector: 'app-header',
+    imports: [CommonModule, RouterModule],
+    templateUrl: './header.component.html',
+    styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
   constructor(private loginService: LoginService, private isAuthenticated: IsAuthenticatedService, private router: Router) { }
