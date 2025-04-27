@@ -69,4 +69,9 @@ export class LoginComponent implements OnInit {
   })
 
   }
+
+  loginAttempted() {
+    this.messageService.add({severity: 'info', summary: 'Login Tried', detail: "Logging you in ..."})
+    console.log("Someone tried logging in")
+  }
 }
