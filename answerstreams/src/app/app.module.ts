@@ -32,37 +32,37 @@ import { RouterModule } from '@angular/router';
 
 
 @NgModule({
-    declarations: [
-        AppComponent,
-    ],
-    providers: [
-        {
-            provide: HTTP_INTERCEPTORS,
-            useClass: TokenInterceptorService,
-            multi: true
-        }
-    ],
-    bootstrap: [AppComponent],
-    imports: [
-        HttpClientModule,
-        BrowserModule,
-        BrowserAnimationsModule,
-        FormsModule,
-        AppRoutingModule,
-        HeaderComponent,
-        FooterComponent,
-        HomepageComponent,
-        RegisterComponent,
-        LoginComponent,
-        QuestionsComponent,
-        RouterModule,
-        StoreModule.forRoot({questions: questionReducer, answers: answerReducer, loggedInUser: loggedInUserReducer, registerUser: registerUserReducer }, {}),
-        AskQuestionComponent,
-        SingleQuestionComponent,
-        // FontAwesomeModule,
-        EffectsModule.forRoot([QuestionEffects, AnswerEffects, LoggedInUserEffects, RegisterUserEffects]),
-        AskQuestionComponent,
-        StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() , connectInZone: true})
-    ]
+    // declarations: [
+    //     AppComponent,
+    // ],
+    // providers: [
+    //     {
+    //         provide: HTTP_INTERCEPTORS,
+    //         useClass: TokenInterceptorService,
+    //         multi: true
+    //     }
+    // ],
+    // bootstrap: [AppComponent],
+    // imports: [
+    //     HttpClientModule,
+    //     BrowserModule,
+    //     BrowserAnimationsModule,
+    //     FormsModule,
+    //     AppRoutingModule,
+    //     HeaderComponent,
+    //     FooterComponent,
+    //     HomepageComponent,
+    //     RegisterComponent,
+    //     LoginComponent,
+    //     QuestionsComponent,
+    //     RouterModule,
+    //     // StoreModule.forRoot({questions: questionReducer, answers: answerReducer, loggedInUser: loggedInUserReducer, registerUser: registerUserReducer }, {}),
+    //     AskQuestionComponent,
+    //     SingleQuestionComponent,
+    //     // FontAwesomeModule,
+    //     // EffectsModule.forRoot([QuestionEffects, AnswerEffects, LoggedInUserEffects, RegisterUserEffects]),
+    //     AskQuestionComponent,
+    //     // StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() , connectInZone: true})
+    // ]
 })
 export class AppModule { }

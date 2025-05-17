@@ -14,6 +14,7 @@ export class LoginService{
     user: any;
     constructor(private router: Router,private http: HttpClient) { }
     login(user: LoginInterface): Observable<LoggedInUser> {
+        console.log("Inside login service, ", user)
         return this.http.post<LoggedInUser>('http://localhost:4000/user/login', user)
     }
 
