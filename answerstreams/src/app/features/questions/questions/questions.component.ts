@@ -10,15 +10,19 @@ import { QuestionService } from '../../../core/services/questions.service';
 import { RouterModule } from '@angular/router';
 import { selectQuestions } from 'src/app/state/selectors/questions.selectors';
 import * as QuestionActions from 'src/app/state/actions/questions.actions'
+import { DataView } from 'primeng/dataview'
+import { DataViewModule } from 'primeng/dataview'
+import { CardModule } from 'primeng/card'
+import { ButtonModule } from 'primeng/button'
 
 @Component({
     selector: 'app-questions',
     templateUrl: './questions.component.html',
     styleUrls: ['./questions.component.css'],
-    imports: [CommonModule, HeaderComponent, FooterComponent, RouterModule]
+    imports: [CommonModule, HeaderComponent, FooterComponent, RouterModule, DataView, CardModule, ButtonModule]
 })
 export class QuestionsComponent implements OnInit{
-    questions: Question[ ] = [];
+    questions: Question[] = [];
 
     constructor(private store: Store<AppState>, private questionService: QuestionService) {  
     }

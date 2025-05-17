@@ -1,14 +1,51 @@
 <app-header></app-header>
+<div class="flex">
+    <div class="flex-1 w-2rem h-2rem">
+        1
+    </div>
+    <div class="flex-1 w-2rem h-2rem">
+        2
+    </div>
+</div>
+<p-card>
+    Hello, we have {{ questions.length }} questions 
+    <p-dataview [rows]="1" [value]="questions" [paginator]="true">
+        <ng-template #list let-items>
+            <div class="grid" *ngFor="let item of items">
+            <!-- <div class="grid"> -->
+                <div class="col-2">
+                    <div class="col-12 h-18">
+
+                        <p-button icon="pi pi-person" [rounded]="true" severity="secondary" />
+                    </div>
+                    <div class="col-12 h-80"></div>
+                </div>
+                <div class="col-10">
+                    <div class="col-12 h-10">{{item.createdAt | date:'short':'UTC'}}</div>
+                    <div class="col-12 h-15">{{item.title}}</div>
+                    <div class="col-12 h-45">{{item.body}}</div>
+                    <div class="col-12 h-15">
+                        <div class="flex justify-content-around">
+                            <p-button icon="pi pi-bookmark" [rounded]="true" severity="secondary" />
+                            <p-button icon="pi pi-bookmark" [rounded]="true" severity="secondary" />
+                            <p-button icon="pi pi-bookmark" [rounded]="true" severity="secondary" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+    </p-dataview>
+</p-card>
 <div class="container">
     <div class="heading">
         <h2>All Questions</h2>
         <button class="ask-question" routerLink="/ask">Ask</button>
     </div>
-    <div class="question-container" *ngFor="let question of questions" >
+    <div class="question-container" *ngFor="let question of questions">
         <div class="question">
             <div class="question-activity">
                 <div class="votes">
-                    <p>0  votes</p>
+                    <p>0 votes</p>
                 </div>
                 <div class="answers">
                     <p>1 Answer</p>
@@ -33,7 +70,7 @@
     </div>
     <div class="page-links">
         <div class="page">
-           <button>1</button>
+            <button>1</button>
         </div>
         <div class="page">
             <button>2</button>
