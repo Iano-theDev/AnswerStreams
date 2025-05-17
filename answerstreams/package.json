@@ -24,9 +24,11 @@
     "@ngrx/store-devtools": "^19.1.0",
     "@primeng/themes": "^19.1.0",
     "httpclient": "^0.1.0",
+    "primeflex": "^4.0.0",
     "primeicons": "^7.0.0",
     "primeng": "^19.1.0",
     "rxjs": "~7.8.0",
+    "tostring": "^0.0.1",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"
   },

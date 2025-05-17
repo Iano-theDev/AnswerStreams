@@ -14,12 +14,14 @@ import { DataView } from 'primeng/dataview'
 import { DataViewModule } from 'primeng/dataview'
 import { CardModule } from 'primeng/card'
 import { ButtonModule } from 'primeng/button'
+import { AvatarModule } from 'primeng/avatar';
+import { AvatarGroupModule } from 'primeng/avatargroup';
 
 @Component({
     selector: 'app-questions',
     templateUrl: './questions.component.html',
     styleUrls: ['./questions.component.css'],
-    imports: [CommonModule, HeaderComponent, FooterComponent, RouterModule, DataView, CardModule, ButtonModule]
+    imports: [CommonModule, HeaderComponent, FooterComponent, RouterModule, DataView, CardModule, ButtonModule, AvatarModule]
 })
 export class QuestionsComponent implements OnInit{
     questions: Question[] = [];
