@@ -1,12 +1,13 @@
 <app-header></app-header>
+<!-- <div style="margin-top: 64px;"></div> -->
 <p-card>
-     <button class="ask-question" routerLink="/ask">Ask</button>
+    <!-- <button class="ask-question" routerLink="/ask">Ask</button> -->
     <p-dataview [rows]="5" [value]="questions" [paginator]="true">
         <ng-template #list let-items>
             <div class="grid grid-cols-12 gap-4 grid-nogutter border-bottom-1 p-3" *ngFor="let item of items">
                 <div class="col-1grid">
                     <div class="col-12 h-2rem">
-
+                        
                         <p-avatar image="https://primefaces.org/cdn/primeng/images/demo/avatar/amyelsner.png" class="mr-2" size="xlarge" shape="circle" />
                     </div>
                     <div class="col-12 h-9rem"></div>
@@ -25,7 +26,7 @@
                             </b>
                         </div>
                     </div>
-
+                    
                     <!-- create a pipe to shorten text under show more -->
                     <div class="col-12 h-3rem">{{item.body}}</div>
                     <div class="col-12 h-1.5rem">
@@ -39,6 +40,7 @@
             </div>
         </ng-template>
     </p-dataview>
+    <p-speeddial [model]="speedDialAction" direction="down-right" [style]="{ position: 'fixed', bottom: '4rem', right: '2rem', zIndex: 1000 }" ></p-speeddial>
 </p-card>
 
 <app-footer></app-footer>
