@@ -1,5 +1,6 @@
 <app-header></app-header>
 <p-card>
+     <button class="ask-question" routerLink="/ask">Ask</button>
     <p-dataview [rows]="5" [value]="questions" [paginator]="true">
         <ng-template #list let-items>
             <div class="grid grid-cols-12 gap-4 grid-nogutter border-bottom-1 p-3" *ngFor="let item of items">
