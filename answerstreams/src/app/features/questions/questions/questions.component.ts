@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
 import { Question } from 'src/app/shared/models/question.model';
 import { QuestionService } from '../../../core/services/questions.service';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { selectQuestions } from 'src/app/state/selectors/questions.selectors';
 import * as QuestionActions from 'src/app/state/actions/questions.actions'
 import { DataView } from 'primeng/dataview'
@@ -16,20 +16,28 @@ import { CardModule } from 'primeng/card'
 import { ButtonModule } from 'primeng/button'
 import { AvatarModule } from 'primeng/avatar';
 import { AvatarGroupModule } from 'primeng/avatargroup';
+import { SpeedDial } from 'primeng/speeddial';
 
 @Component({
     selector: 'app-questions',
     templateUrl: './questions.component.html',
     styleUrls: ['./questions.component.css'],
-    imports: [CommonModule, HeaderComponent, FooterComponent, RouterModule, DataView, CardModule, ButtonModule, AvatarModule]
+    standalone: true,
+    imports: [CommonModule, HeaderComponent, FooterComponent, RouterModule, DataView, CardModule, ButtonModule, AvatarModule, SpeedDial]
 })
 export class QuestionsComponent implements OnInit{
     questions: Question[] = [];
+    speedDialAction: any;
 
-    constructor(private store: Store<AppState>, private questionService: QuestionService) {  
+    constructor(private store: Store<AppState>, private questionService: QuestionService, public router: Router) {  
     }
   
     ngOnInit(): void {
+      this.speedDialAction = [{
+        icon: 'pi pi-plus',
+        command: () => this.routeToAskPage()
+      }]
+
       this.store.select(selectQuestions).subscribe(questions => {
         this.questions = questions as Question[];
         console.log(this.questions);
@@ -51,5 +59,9 @@ export class QuestionsComponent implements OnInit{
     //       console.log(this.questions);
     //     },
     // )
+}
+
+routeToAskPage() {
+  this.router.navigate(['/ask'])
 }
 }
