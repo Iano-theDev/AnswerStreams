@@ -40,7 +40,8 @@
             </div>
         </ng-template>
     </p-dataview>
-    <p-speeddial [model]="speedDialAction" direction="down-right" [style]="{ position: 'fixed', bottom: '4rem', right: '2rem', zIndex: 1000 }" ></p-speeddial>
+    <!-- <p-speeddial [model]="speedDialAction" direction="down-right" [style]="{ position: 'fixed', bottom: '4rem', right: '2rem', zIndex: 1000 }" ></p-speeddial> -->
+    <p-button icon="pi pi-plus" [rounded]="true" severity="info" [style]="{ position: 'fixed', bottom: '6rem', right: '4rem', zIndex: 1000 }" (click)="routeToAskPage()" size="large"></p-button>  />
 </p-card>
 
 <app-footer></app-footer>
