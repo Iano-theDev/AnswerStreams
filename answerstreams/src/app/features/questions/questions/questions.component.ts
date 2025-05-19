@@ -23,7 +23,7 @@ import { SpeedDial } from 'primeng/speeddial';
     templateUrl: './questions.component.html',
     styleUrls: ['./questions.component.css'],
     standalone: true,
-    imports: [CommonModule, HeaderComponent, FooterComponent, RouterModule, DataView, CardModule, ButtonModule, AvatarModule, SpeedDial]
+    imports: [CommonModule, HeaderComponent, FooterComponent, RouterModule, DataView, CardModule, ButtonModule, AvatarModule]
 })
 export class QuestionsComponent implements OnInit{
     questions: Question[] = [];
