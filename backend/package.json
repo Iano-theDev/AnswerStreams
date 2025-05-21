@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "answerstreams endpoints",
   "scripts": {
+    "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start:build": "tsc -w",
     "start:run": "nodemon dist/server.js",
