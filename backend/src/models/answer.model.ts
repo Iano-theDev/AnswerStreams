@@ -1,4 +1,4 @@
-class AnswerModel {
+export class AnswerModel {
     
     constructor(
         public answerId: string,

@@ -8,3 +8,5 @@ class QuestionCommentModel {
         public createdAt: string
     ){}
 }
+
+export default QuestionCommentModel

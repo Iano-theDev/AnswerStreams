@@ -11,3 +11,5 @@ class UserModel {
         public createdsAt: string,
     ){}
 }
+
+export default UserModel

@@ -9,7 +9,7 @@ questionsRouter.get('', getAllQuestions);
 
 questionsRouter.get('/:id', getSingleQuestion)
 
-questionsRouter.post('', verifyToken, addQuestion)
+questionsRouter.post('', addQuestion)
 
 questionsRouter.put('/:id', updateQuestion)
 

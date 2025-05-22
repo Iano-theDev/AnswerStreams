@@ -2,6 +2,8 @@ import { RequestHandler, Request, Response } from "express"
 import mssql from "mssql"
 import { v4 as uid } from "uuid"
 import { sqlConfig } from "../config/config"
+import QuestionModel from "../models/question.model"
+import QuestionCommentModel from  "../models/questionComment.model"
 
 //get comments for a particular question
 export const getQuestionComments: RequestHandler = async (req, res) => {
