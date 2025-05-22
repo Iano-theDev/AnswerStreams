@@ -8,3 +8,6 @@ class AnswerCommentModel {
         public createdAt: string
     ){}
 }
+
+
+export default AnswerCommentModel

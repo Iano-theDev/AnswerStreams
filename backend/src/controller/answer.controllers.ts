@@ -2,6 +2,8 @@ import { RequestHandler, Request, Response } from "express";
 import mssql from "mssql";
 import { sqlConfig } from "../config/config";
 import {v4 as uid} from 'uuid';
+import { AnswerModel } from "../models/answer.model";
+
 
 interface ExtendedRequest extends Request {
     body: {

@@ -5,7 +5,7 @@ import path, { resolve } from 'path'
 import dotenv from 'dotenv'
 import bcrypt from 'bcrypt'
 import jwt from 'jsonwebtoken'
-
+import UserModel from "../models/user.model"
 
 dotenv.config({ path: path.resolve(__dirname, '../../.env') })
 
