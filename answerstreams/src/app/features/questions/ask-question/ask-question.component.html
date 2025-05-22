@@ -1,22 +1,28 @@
-<app-header></app-header>
-<div class="body">
-    <a  routerLink = "/questions">Back</a>
-    <div class="container">
-        <h3>Add a question</h3>
-        <form #askForm ="ngForm" (ngSubmit)="onSubmit(askForm)" >
-            <div class="details-container">
-                <label for=""><b>Title: </b> enter the title to your question </label>
-                <input type="text" name="title" ngModel #title="ngModel" required>
-                <span class="invalid-entry" *ngIf="title.touched && title.invalid">This fields cant be empty</span>
+<p-card>
+    <form [formGroup]="questionForm" (ngSubmit)="onSubmit()">
+        <!-- title -->
+        <div class="flex flex-column gap-2">
+
+            <div class="">
+                <p-floatlabel variant="on">
+                    <input pInputText id="title" autocomplete="off" formControlName="title" class="w-full" />
+                    <label for="describe">Title</label>
+                </p-floatlabel>
             </div>
-            <div class="details-container">
-                <label for=""><b>Details:</b> describe the details to the question with the title you described </label>
-                <textarea name="body" ngModel  cols="30" rows="10" #describe="ngModel" required></textarea>
+
+            <!-- body -->
+            <div class="">
+                <p-floatlabel variant="in">
+                    <textarea class="w-full" pTextarea id="describe" formControlName="body" rows="5" style="resize: none">
+                    </textarea>
+                    <label for="describe">Describe your question here</label>
+                </p-floatlabel>
             </div>
-            <div class="btn-container">
-                <button class="ask-question">Ask question</button>
+
+            <!-- submit button -->
+            <div class="flex align-self-end">
+                <p-button label="Ask" severity="info" type="submit" />
             </div>
-        </form>
-    </div>    
-</div>
-<app-footer></app-footer>
+        </div>
+    </form>
+</p-card>

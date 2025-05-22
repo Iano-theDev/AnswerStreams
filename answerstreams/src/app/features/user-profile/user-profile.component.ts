@@ -14,7 +14,7 @@ import { selectAnswers } from 'src/app/state/selectors/answer.selectors';
 
 @Component({
     selector: 'app-user-profile',
-    imports: [CommonModule, HeaderComponent, FooterComponent],
+    imports: [CommonModule, HeaderComponent],
     templateUrl: './user-profile.component.html',
     styleUrls: ['./user-profile.component.css']
 })
