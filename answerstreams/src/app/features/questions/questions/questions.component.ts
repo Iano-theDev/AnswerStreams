@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from "../../../shared/components/header/header.component";
-import { FooterComponent } from "../../../shared/components/footer/footer.component";
 import { AppState } from 'src/app/state/app.state';
-import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
 import { Question } from 'src/app/shared/models/question.model';
 import { QuestionService } from '../../../core/services/questions.service';
@@ -11,12 +9,9 @@ import { Router, RouterModule } from '@angular/router';
 import { selectQuestions } from 'src/app/state/selectors/questions.selectors';
 import * as QuestionActions from 'src/app/state/actions/questions.actions'
 import { DataView } from 'primeng/dataview'
-import { DataViewModule } from 'primeng/dataview'
 import { CardModule } from 'primeng/card'
 import { ButtonModule } from 'primeng/button'
 import { AvatarModule } from 'primeng/avatar';
-import { AvatarGroupModule } from 'primeng/avatargroup';
-import { SpeedDial } from 'primeng/speeddial';
 import { DialogService, DynamicDialogRef } from 'primeng/dynamicdialog'
 import { AskQuestionComponent } from '../ask-question/ask-question.component';
 
@@ -51,18 +46,6 @@ export class QuestionsComponent implements OnInit {
       console.log('console works')
     });
     this.store.dispatch(QuestionActions.loadQuestions())
-
-    // **********************************************
-    // this.questionService.getQuestions().subscribe(
-    //     (questions: Question[]) => {
-    //       this.questions = questions;
-    //       (error:any) => {
-    //         console.log(error);
-    //       }
-    //       console.log('got It')
-    //       console.log(this.questions);
-    //     },
-    // )
   }
 
   routeToAskPage() {
