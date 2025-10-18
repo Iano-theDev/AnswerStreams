@@ -52,6 +52,10 @@ export class QuestionsComponent implements OnInit {
     this.router.navigate(['/ask'])
   }
 
+  viewQuestion(questionId: string) {
+    this.router.navigate([`/questions/${questionId}`])
+  }
+
   openAskQuestionDialog() {
     this.ref = this.dialogService.open(AskQuestionComponent, { header: "Post a question", width: '50%', closable: true})
   }

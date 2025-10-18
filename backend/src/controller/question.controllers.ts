@@ -25,13 +25,14 @@ export const getAllQuestions: RequestHandler = async (req, res)=> {
         const pool = await mssql.connect(sqlConfig)
         const questions: QuestionModel[] = await ( await pool.request().execute('spGetAllQuestions')).recordset
         res.status(200).json(questions)
-    } catch (error: any){
+    } 
+    catch (error: any) {
         res.status(404).json(error.message)
     }
 }
 
 // get single questions
-export const getSingleQuestion=async(req:ExtendedRequest, res: Response)=>{
+export const getSingleQuestion=async(req:ExtendedRequest, res: Response) => {
     try {
         const id = req.params.id
         const pool = await mssql.connect(sqlConfig)

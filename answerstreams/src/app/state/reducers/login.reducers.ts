@@ -4,7 +4,8 @@ import * as loginActions from "src/app/state/actions/login.actions"
 
 
 export interface LoggedInUserState {
-    user: LoggedInUser | null;
+    user: any;
+    // user: LoggedInUser | null;
     loading: boolean;
     error: any;
 }
@@ -36,5 +37,10 @@ export const loggedInUserReducer = createReducer(
         loading: false,
         error: error
     })
-    )
+    ),
+    on(loginActions.logout, state => ({
+        ...state,
+        loading: false,
+        user: null
+    }))
 );

@@ -4,6 +4,8 @@ import { MessageService } from "primeng/api";
 import { catchError, tap, map, mergeMap, of } from "rxjs";
 import { LoginService } from "src/app/core/services/login.service";
 import * as loginActions from "src/app/state/actions/login.actions"
+import { jwtDecode } from "jwt-decode";
+import { LoggedInUser } from "src/app/shared/models/loggedInUser.model";
 
 
 
@@ -17,13 +19,19 @@ export class LoggedInUserEffects {
             ofType(loginActions.login),
             mergeMap((action) =>
                 this.loginService.login(action.user).pipe(
-                    tap((user) => {
-                        console.log("Login action recieved by effect +> :  ", user);
-                        localStorage.setItem("token", user.token)
-                        this.messageService.add({ severity: 'success', summary: 'Login Successful', detail: `Welcome ${user.name}` })
+                    tap((response) => {
+                        console.log("Login action recieved by effect +> :  ", response);
+                        const decodedUser: LoggedInUser = jwtDecode(response.token)
+                        localStorage.setItem("token", response.token)
+                        console.log("Decoded token is: ", decodedUser)
+                        this.messageService.add({ severity: 'success', summary: 'Login Successful', detail: `Welcome ${decodedUser.name}` })
 
                     }),
-                    map((user) => loginActions.loginSuccess({ user })),
+                    map((response) => {
+                        const decodedUser: LoggedInUser = jwtDecode(response.token)
+                        // const user: LoggedInUser = [...decodedUser]
+                        return loginActions.loginSuccess({user: decodedUser})
+                    }),
                     catchError((error) => {
                         this.messageService.add({ severity: 'error', summary: 'Login Error', detail: error.message ? error.message : "Error logging in" })
                         return of(loginActions.loginError({ error }))

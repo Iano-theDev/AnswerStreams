@@ -67,9 +67,9 @@ export const logUserIn = async (req: ExtendedRequest, res: Response) => {
                 const validPassword = await bcrypt.compare(password, user[0].password)
 
                 if (validPassword) {
-                    const token = jwt.sign(user[0], process.env.JWT_SECRET as string, { expiresIn: '1d' })
-                    // res.status(201).json({ 'token': token, 'user': { id: user[0].id, name: user[0].name, email: user[0].email, isAdmin: user[0].isAdmin } })
-                    res.status(201).json({ token, user })
+                    const   {password, ...userForResponse} = user[0]
+                    const token = jwt.sign(userForResponse, process.env.JWT_SECRET as string, { expiresIn: '10' })
+                    res.status(201).json({ token })
                 } else {
                     res.status(403).json({ message: 'Unauthorized credentials' })
                 }
