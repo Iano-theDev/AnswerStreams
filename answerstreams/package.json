@@ -24,6 +24,8 @@
     "@ngrx/store-devtools": "^19.1.0",
     "@primeng/themes": "^19.1.0",
     "httpclient": "^0.1.0",
+    "jwt-decode": "^4.0.0",
+    "jwt-decoder": "^0.0.0",
     "primeflex": "^4.0.0",
     "primeicons": "^7.0.0",
     "primeng": "^19.1.0",

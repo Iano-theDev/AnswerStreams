@@ -42,15 +42,6 @@ export class LoginComponent implements OnInit, OnDestroy {
       this.isLoading = loading;
     })
 
-    // this.store.select(selectLoggedInUser).subscribe((user: any) => {
-    //   if (user) {
-    //     this.router.navigateByUrl('/', { skipLocationChange: true }).then(() => {
-    //       this.router.navigate(["/questions"]);
-    //     }
-    //     );
-    //   }
-    // })
-
     this.store.select(selectLoggedInUser).pipe(takeUntil(this.destroy$)).subscribe((user: any) => {
       if (user) {
         this.router.navigateByUrl('/', { skipLocationChange: true }).then(() => {
@@ -64,7 +55,6 @@ export class LoginComponent implements OnInit, OnDestroy {
       this.error = error;
       console.log("Error logging in: ", error)
     })
-
 
   }
 

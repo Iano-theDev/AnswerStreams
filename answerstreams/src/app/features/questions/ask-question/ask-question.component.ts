@@ -17,6 +17,7 @@ import { InputTextModule } from 'primeng/inputtext'
 import { TextareaModule } from 'primeng/textarea'
 import { FloatLabelModule } from 'primeng/floatlabel'
 import { DynamicDialogRef } from 'primeng/dynamicdialog';
+import { firstValueFrom } from 'rxjs';
 
 @Component({
   selector: 'app-ask-question',
@@ -49,9 +50,9 @@ export class AskQuestionComponent implements OnInit {
 
   ngOnInit(): void {
 
-    const user = this.store.select(selectLoggedInUser).subscribe((user: any) => {
-      console.log(user?.user[0].userId)
-    })
+    // const user = this.store.select(selectLoggedInUser).subscribe((user: any) => {
+    //   console.log(user?.user[0].userId)
+    // })
 
     // this.store.select(selectLoggedInUser).subscribe(user => {
     //   this.user = user as unknown as User
@@ -65,15 +66,27 @@ export class AskQuestionComponent implements OnInit {
 
 
 
-  onSubmit() {
+  async onSubmit() {
     if (this.questionForm.valid) {
       // console.log(form.value);
       console.log(this.questionForm.value);
+      // let user;
 
+      // this.store.select(selectLoggedInUser).subscribe(res=> {
+      //   if (res) {
+      //     user = res;
+      //     console.log("Current user is: ", user)
+      //   } else {
+      //     console.log("Current user not found")
+
+      //   }
+      // })
+
+      const user = await firstValueFrom(this.store.select(selectLoggedInUser));
 
 
       this.store.dispatch(QuestionsActions.addQuestion({
-        ...this.questionForm.value
+        ...this.questionForm.value, user: user
       }));
     }
 

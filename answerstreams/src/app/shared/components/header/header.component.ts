@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { Router, RouterModule } from '@angular/router';
 import { LoginService } from 'src/app/core/services/login.service';
 import { IsAuthenticatedService } from 'src/app/core/services/is-authenticated.service';
+import { Store } from '@ngrx/store';
+import * as loginActions from "src/app/state/actions/login.actions"
 
 @Component({
     selector: 'app-header',
@@ -11,12 +13,13 @@ import { IsAuthenticatedService } from 'src/app/core/services/is-authenticated.s
     styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-  constructor(private loginService: LoginService, private isAuthenticated: IsAuthenticatedService, private router: Router) { }
+  constructor(private loginService: LoginService, private isAuthenticated: IsAuthenticatedService, private router: Router, private store: Store) { }
 
   loggedIn: boolean = false;
 
   logout() {
     this.loginService.logout();
+    this.store.dispatch(loginActions.logout())
     this.router.navigate(['/login']);
   }
   
