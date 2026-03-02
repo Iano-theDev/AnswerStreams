@@ -15,13 +15,16 @@ import { QuestionService } from 'src/app/core/services/questions.service';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { Answer } from 'src/app/shared/models/answer.model';
 import { selectAnswers } from 'src/app/state/selectors/answer.selectors';
+import { NgIcon, provideIcons } from '@ng-icons/core';
+import { lucideArrowLeft } from '@ng-icons/lucide';
 
 
 @Component({
     selector: 'app-single-question',
     templateUrl: './single-question.component.html',
     styleUrls: ['./single-question.component.css'],
-    imports: [CommonModule, HeaderComponent, RouterModule]
+    imports: [CommonModule, HeaderComponent, RouterModule, NgIcon],
+    providers: [ provideIcons({lucideArrowLeft})]
 })
 export class SingleQuestionComponent implements OnInit {
   showInput?: boolean;
